@@ -1,0 +1,8 @@
+import { Component, inject } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Button } from '../../shared/components/button/button';
+import { RevealDirective } from '../../shared/directives/reveal.directive';
+import { Cta } from '../../shared/components/cta/cta';
+@Component({ imports:[NgFor,Button,RevealDirective,Cta], templateUrl:'./solution-page.html', styleUrl:'./solution-page.scss' })
+export default class SolutionPage { private readonly route=inject(ActivatedRoute); protected readonly kind=this.route.snapshot.data['kind'] as 'schools'|'colleges'; protected readonly content=this.kind==='schools'?{eyebrow:'Solutions for schools',title:'Make every school day easier to understand',description:'Give leaders, teachers, and administrators a shared operational foundation that keeps attention on learners.',points:[['Clear student context','Keep essential learner information structured and accessible to the right people.'],['Faster daily routines','Simplify attendance and academic coordination across classrooms.'],['A shared picture','Help teams work from consistent information rather than disconnected processes.']]}:{eyebrow:'Solutions for colleges',title:'Bring complex campus operations into focus',description:'Create a connected foundation for departments, academic teams, and administrators—built to scale with your institution.',points:[['Connected departments','Build consistent processes while respecting roles and responsibilities.'],['Academic coordination','Organize student records, schedules, and attendance with less operational friction.'],['Ready to grow','Begin with core capabilities and adopt upcoming modules as your needs evolve.']]}; }

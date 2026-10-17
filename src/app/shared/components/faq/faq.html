@@ -1,0 +1,1 @@
+<div class="faq"><details *ngFor="let item of items(); let i = index" [appReveal]="i * 60"><summary>{{ item.question }}<span aria-hidden="true">+</span></summary><p>{{ item.answer }}</p></details></div>

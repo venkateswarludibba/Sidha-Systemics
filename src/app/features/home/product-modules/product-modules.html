@@ -1,0 +1,10 @@
+<section class="modules section" aria-labelledby="modules-title">
+  <div class="glow glow--one"></div><div class="glow glow--two"></div>
+  <div class="container">
+    <div class="intro" appReveal><div><span class="eyebrow">The Sidha ecosystem</span><h2 id="modules-title">Every role. Every workflow.<br><em>One connected platform.</em></h2></div><p>Purpose-built modules create a shared operating system for your institution—without losing the simplicity each person needs.</p></div>
+    <div class="module-layout">
+      <article class="erp-card" appReveal><div class="erp-copy"><span class="module-label"><i></i> Core platform</span><div class="module-icon">ER</div><h3>ERP Management</h3><p>Bring student records, attendance, academics, finance workflows, and reporting into one dependable institutional foundation.</p><a routerLink="/features">Explore ERP capabilities <span aria-hidden="true">→</span></a></div><div class="erp-visual" aria-hidden="true"><div class="visual-top"><span></span><i></i><i></i></div><div class="visual-content"><aside><b></b><b></b><b></b><b></b></aside><div class="visual-main"><small>Institution overview</small><strong>Operations at a glance</strong><div class="visual-stats"><span></span><span></span><span></span></div><div class="visual-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></article>
+      <div class="module-grid"><article class="module-card" *ngFor="let module of modules; let i = index" [ngClass]="'tone--' + module.tone" [appReveal]="i * 60"><div class="card-top"><span class="module-icon">{{ module.code }}</span><span class="state" [class.upcoming]="module.status === 'Upcoming'">{{ module.status }}</span></div><h3>{{ module.title }}</h3><p>{{ module.description }}</p><a routerLink="/features" [attr.aria-label]="'Learn about ' + module.title">Learn more <span aria-hidden="true">↗</span></a></article></div>
+    </div>
+  </div>
+</section>

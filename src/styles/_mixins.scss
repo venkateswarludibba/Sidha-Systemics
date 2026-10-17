@@ -1,0 +1,7 @@
+@use 'variables' as v;
+@use 'breakpoints' as b;
+
+@mixin container { width: 100%; max-width: v.$container; margin-inline: auto; padding-inline: clamp(1rem, 3vw, 3.5rem); }
+@mixin tablet { @media (min-width: b.$tablet) { @content; } }
+@mixin desktop { @media (min-width: b.$desktop) { @content; } }
+@mixin focus { outline: 3px solid rgba(99, 91, 255, .25); outline-offset: 3px; }

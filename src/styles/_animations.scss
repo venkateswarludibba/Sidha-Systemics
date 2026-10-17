@@ -1,0 +1,17 @@
+@keyframes rise-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-10px) rotate(1deg); } }
+@keyframes pulse-soft { 50% { opacity: .7; transform: scale(1.04); } }
+@keyframes gradient-drift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes shimmer { from { transform: translateX(-140%) skewX(-18deg); } to { transform: translateX(240%) skewX(-18deg); } }
+
+.hero-enter { opacity: 0; animation: rise-in .7s cubic-bezier(.2,.8,.2,1) forwards; }
+.hero-enter--delay-1 { animation-delay: .1s; }.hero-enter--delay-2 { animation-delay: .2s; }.hero-enter--delay-3 { animation-delay: .3s; }
+.float { animation: float 5s ease-in-out infinite; }
+.reveal { opacity: 0; transform: translateY(28px) scale(.985); transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.stagger > * { transition-delay: calc(var(--item-index, 0) * 80ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .hero-enter, .reveal { opacity: 1; transform: none; }
+}

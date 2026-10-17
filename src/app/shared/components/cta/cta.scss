@@ -1,0 +1,5 @@
+.panel { position: relative; padding: clamp(2.5rem,7vw,5.5rem); overflow: hidden; text-align: center; background: linear-gradient(135deg,#edebff,#e8fbf7); border: 1px solid #dad7ff; border-radius: 2rem; }
+.panel::after { position: absolute; right: -6rem; bottom: -8rem; width: 18rem; height: 18rem; content: ''; background: rgba(99,91,255,.12); border-radius: 50%; }
+h2 { max-width: 680px; margin: .8rem auto; font-size: clamp(2rem,5vw,3.8rem); line-height: 1.05; letter-spacing: -.05em; }
+p { color: #596a7d; }
+.actions { position: relative; z-index: 1; }

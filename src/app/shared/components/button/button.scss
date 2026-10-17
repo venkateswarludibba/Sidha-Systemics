@@ -1,0 +1,7 @@
+.button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 2.85rem; padding: .7rem 1.15rem; border: 1px solid transparent; border-radius: .8rem; font-weight: 750; line-height: 1; transition: transform .2s, box-shadow .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button:focus-visible { outline: 3px solid rgba(99,91,255,.28); outline-offset: 3px; }
+.button--primary { color: #fff; background: linear-gradient(135deg,#635bff,#4938d3); box-shadow: 0 10px 22px rgba(87,76,226,.25); }
+.button--primary:hover { box-shadow: 0 14px 28px rgba(87,76,226,.35); }
+.button--secondary { color: #263c59; background: #fff; border-color: #d9dfeb; }
+.button--ghost { color: #4d45d5; background: #efedff; }

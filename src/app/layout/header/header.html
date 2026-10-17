@@ -1,0 +1,15 @@
+<header>
+  <div class="container bar">
+    <app-logo />
+    <button class="menu" type="button" (click)="toggle()" [attr.aria-expanded]="open()" aria-controls="main-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav id="main-nav" [class.open]="open()" aria-label="Main navigation">
+      <a routerLink="/features" routerLinkActive="active" (click)="close()">Features</a>
+      <a routerLink="/solutions/schools" routerLinkActive="active" (click)="close()">Schools</a>
+      <a routerLink="/solutions/colleges" routerLinkActive="active" (click)="close()">Colleges</a>
+      <a routerLink="/pricing" routerLinkActive="active" (click)="close()">Pricing</a>
+      <a routerLink="/resources" routerLinkActive="active" (click)="close()">Resources</a>
+      <div class="mobile-actions"><a routerLink="/product-demo" (click)="close()">Sign in</a><app-button link="/book-demo" label="Book a demo" /></div>
+    </nav>
+    <div class="desktop-actions"><a routerLink="/product-demo">Sign in</a><app-button link="/book-demo" label="Book a demo" /></div>
+  </div>
+</header>

@@ -1,0 +1,8 @@
+.feature-list { display: grid; gap: 1.2rem; }
+article { display: grid; gap: 1.5rem; padding: clamp(1.5rem,4vw,3rem); background: #fff; border: 1px solid #e0e6ef; border-radius: 1.4rem; }
+h2 { margin: .8rem 0; font-size: clamp(1.6rem,3vw,2.3rem); }
+p { max-width: 620px; color: #5c6b7c; line-height: 1.7; }
+ul { margin: 0; padding: 0; list-style: none; }
+li { padding: .55rem 0; color: #40526a; font-weight: 650; }
+li::first-letter { color: #14a994; }
+@media(min-width:768px){ article { grid-template-columns: 2fr 1fr; align-items: center; } }
