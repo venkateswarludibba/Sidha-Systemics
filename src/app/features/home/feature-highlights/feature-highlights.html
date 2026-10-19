@@ -1,1 +1,16 @@
-<section class="section"><div class="container"><div class="section-head" appReveal><span class="eyebrow">One connected workspace</span><h2>Daily operations, made beautifully simple</h2><p>Start with essential workflows today and grow into a broader connected experience as new modules become available.</p></div><div class="grid grid--3"><article class="card" *ngFor="let feature of features; let i = index" [appReveal]="i * 70"><div class="icon-box">{{ feature.icon }}</div><h3>{{ feature.title }}</h3><p>{{ feature.text }}</p><span class="status">{{ feature.status }}</span></article></div></div></section>
+<section class="section">
+    <div class="container">
+        <div class="section-head" appReveal><span class="eyebrow">One connected workspace</span>
+            <h2>Daily operations, made beautifully simple</h2>
+            <p>Start with essential workflows today and grow into a broader connected experience as new modules become
+                available.</p>
+        </div>
+        <div class="grid grid--3">
+            <article class="card" *ngFor="let feature of features; let i = index" [appReveal]="i * 70">
+                <div class="icon-box">{{ feature.icon }}</div>
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.text }}</p><span class="status">{{ feature.status }}</span>
+            </article>
+        </div>
+    </div>
+</section>
